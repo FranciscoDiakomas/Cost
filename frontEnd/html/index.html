@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cost</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="shortcut icon" href="../imagens/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <p id="EntrarBTN" style="display: none;"></p>
+                <img src="../imagens/logo.png" alt="">
+            </div>
+            <ul>
+                <li><a href="#Inicial" class="Inicial">Inicial</a></li>
+                <li><a href="#Projectos" class="Projectos" id="listProjects">Projectos</a></li>
+                <li><a href="#Contacto" class="DashBoard">DashBoard</a></li>
+                <li><button id="OUt">Sair</button></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article id="Inicial">
+                <h1>Bem vindo ao <span>Costs</span></h1>
+                <h3>Comece a  gerenciar os seus Projectos agora mesmo!</h3>
+                    <img src="../imagens/icons8-stack-of-coins-48.png" alt="">
+                <a href="#CriarProjectos">
+                    <button id="createProject">Criar projecto</button>
+                </a>
+                
+        </article>
+        <article id="CriarProjectos" class="hiden">
+            <form>
+                <h1>Criar Projecto</h1>
+                <h3>Crie seu projecto para depois adicionar os serviços</h3>
+                <p id="Warning"></p>
+                <label for="">Nome do Projecto</label>
+                <input type="text" placeholder="Insira o nome do Projecto" id="nome">
+                <label for="">Orçamento do Projecto</label>
+                <input type="number" id="orcamento" placeholder="Insira o Total de Orçamento">
+                <label for="">Categoria do Projecto</label>
+                <select name="" id="categoria">
+                    <option value="">Selecione uma categoria</option>
+                        <option value="FrontEnd">FrontEnd</option>
+                        <option value="Backend">Backend</option>
+                        <option value="Game">Game</option>
+                        <option value="Mobile">Mobile</option>
+                        <option value="Desktop">Desktop</option>     
+                </select>
+                <button type="submit" id="criarProjecto">Criar Projecto</button>
+                <div class="spinner" id="spinner"></div>
+                <div id="sucess">
+                    <p>Cadastrado com Sucesso!</p>
+                </div>
+            </form>
+            
+        </article>
+        <article id="Projectos" class="hiden">
+            <div>
+                <div id="ProjectsHeader">
+                    <h1>Meus Projectos</h1>
+                    <form action="" id="PEsquisar">
+                        <select name="" id="BuscarprojetoInput">
+                            <option value="">Selecione uma categoria</option>
+                            <option value="FrontEnd">FrontEnd</option>
+                            <option value="Backend">Backend</option>
+                            <option value="Game">Game</option>
+                            <option value="Mobile">Mobile</option>
+                            <option value="Desktop">Desktop</option>
+                        </select>
+                        <button type="submit" id="BuscarprojetoBTn">Buscar</button>
+                    </form>
+            
+                </div>
+                <aside>
+                   
+                    
+                </aside>
+
+                <button id="createProject">Criar Novo Projecto</button>
+            </div>
+        </article>
+    </main>
+
+
+    <div id="editProjectForm">
+        
+        <form>
+            <button id="closeModal">X</button>
+            <h1>Editar Projecto</h1>
+            <h3>Edite seu projecto para depois ver os serviços</h3>
+            <p id="Warning1"></p>
+            <label for="">Nome do Projecto</label>
+            <input type="text" placeholder="Insira o nome do Projecto" id="Nnome">
+            <label for="">Orçamento do Projecto</label>
+            <input type="number" id="Norcamento" placeholder="Insira o Total de Orçamento">
+            <label for="">Categoria do Projecto</label>
+            <select name="" id="Ncategoria">
+                <option value="">Selecione uma categoria</option>
+                <option value="FrontEnd">FrontEnd</option>
+                <option value="Backend">Backend</option>
+                <option value="Game">Game</option>
+                <option value="Mobile">Mobile</option>
+                <option value="Desktop">Desktop</option>
+            </select>
+            <button type="submit" id="SalvarProecto">Salvar Projecto</button>
+            <div class="spinner" id="spinner1"></div>
+            <div id="sucess" class="success1">
+                <p>Actualizado com Sucesso!</p>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <div id="conteiner">
+            <div class="about">
+                <div>
+                    <img src="../imagens/logo.png" alt="">
+                </div>
+                <h4>Cost</h4>
+                
+            </div>
+            <div class="social">
+                <img src="../imagens/icons8-facebook-48.png" alt="">
+                <img src="../imagens/icons8-github-48.png" alt="">
+                <img src="../imagens/icons8-whatsapp-48.png" alt="">
+            </div>
+        </div>
+
+        <h3>&copycopyrigth Cost 2024 Todos direitos reservados</h3>
+        
+    </footer>
+    <script type="module" src="../scripts/script.mjs"></script>
+</body>
+</html>
