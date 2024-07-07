@@ -232,8 +232,15 @@ app.get("/:categoria",(req,res)=>{
 app.post("/",(req,res)=>{
     let {nome,orcamento,categoria} = req.body
     let values = [nome,orcamento,categoria]
-    sql = "insert into projets (nome , orcamento ,ategoria) values (?);"
-    con.query(sql,[values],(err,result)=>{
+    let i 
+    values.find((iten)=>{
+        if(!iten){
+            i= true
+        }
+    })
+    if(!i){
+        sql = "insert into projets (nome , orcamento ,ategoria) values (?);"
+        con.query(sql,[values],(err,result)=>{
         if(err){
             res.json({
                 msg : err.sqlMessage
@@ -244,6 +251,13 @@ app.post("/",(req,res)=>{
             })
         }
     })
+    }else{
+        res.json({
+            msg : "Envie Todos os Dados"
+        })
+    }
+    
+    
 })
 
 
